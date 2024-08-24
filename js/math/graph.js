@@ -12,6 +12,14 @@ class Graph {
         this.segments.push(seg)
     }
 
+    tryAddPoint(seg){
+        if (!this.containsPoint(seg)) {
+            this.addSegment(seg)
+            return true
+        }
+        return false
+    }
+
     containsPoint(point){
         return this.points.find(p => p.equals(point))
     }
