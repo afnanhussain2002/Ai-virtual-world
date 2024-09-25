@@ -17,7 +17,7 @@ class Graph {
     }
 
     tryAddSegment(seg){
-        if (!this.containsPoint(seg)) {
+        if (!this.containsPoint(seg) && !seg.p1.equals(seg.p2)) {
             this.addSegment(seg)
             return true
         }
