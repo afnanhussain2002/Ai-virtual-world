@@ -9,6 +9,10 @@ class Segment {
         (this.p1.equals(seg.p2) && this.p2.equals(seg.p1))
     }
 
+    includes(point){
+        return this.p1.equals(point) || this.p2.equals(point);
+    }
+
     draw(ctx, width = 2, color = "black"){
         ctx.beginPath();
         ctx.lineWidth = width;
